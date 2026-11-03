@@ -1,0 +1,172 @@
+/* ==========================================================================
+   1. VARIABLES Y CONFIGURACIÓN GENERAL (Paleta Oscura Monocromática)
+   ========================================================================== */
+   :root {
+    --fondo-principal: #0a0a0a;    /* Negro profundo para la página */
+    --fondo-tarjeta: #141414;      /* Negro suavizado para tarjetas y secciones */
+    --fondo-hover: #1f1f1f;        /* Gris muy oscuro para estados interactivos */
+    --texto-principal: #ffffff;    /* Blanco puro para títulos y datos clave */
+    --texto-secundario: #a1a1a1;   /* Gris medio para descripciones y párrafos */
+    --borde-sutil: #262626;        /* Líneas de división discretas */
+    --fuente: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  /* Normalización de márgenes y modelo de caja */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: var(--fondo-principal);
+    color: var(--texto-principal);
+    font-family: var(--fuente);
+    line-height: 1.6;
+  }
+  
+  /* ==========================================================================
+     2. ENCABEZADO (Header) Y NAVEGACIÓN (Nav)
+     ========================================================================== */
+  header {
+    background-color: var(--fondo-tarjeta);
+    border-bottom: 1px solid var(--borde-sutil);
+    padding: 2.5rem 1.5rem 1.5rem;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--texto-principal);
+    margin-bottom: 0.3rem;
+  }
+  
+  header p {
+    color: var(--texto-secundario);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    color: var(--texto-secundario);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+  }
+  
+  nav a:hover {
+    color: var(--texto-principal);
+  }
+  
+  /* ==========================================================================
+     3. ESTRUCTURA PRINCIPAL (Main) Y TÍTULOS DE SECCIÓN
+     ========================================================================== */
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+  }
+  
+  section {
+    margin-bottom: 3.5rem;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--texto-principal);
+    border-bottom: 1px solid var(--borde-sutil);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  /* ==========================================================================
+     4. TARJETAS DE PROYECTOS (.tarjeta)
+     ========================================================================== */
+  .tarjeta {
+    background-color: var(--fondo-tarjeta);
+    border: 1px solid var(--borde-sutil);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .tarjeta:hover {
+    border-color: #404040;
+    background-color: var(--fondo-hover);
+  }
+  
+  .tarjeta h3 {
+    font-size: 1.15rem;
+    color: var(--texto-principal);
+    margin-bottom: 0.75rem;
+  }
+  
+  .tarjeta p {
+    color: var(--texto-secundario);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .tarjeta p strong {
+    color: var(--texto-principal);
+  }
+  
+  /* ==========================================================================
+     5. LISTAS DE HABILIDADES, CONTACTO Y ENLACES
+     ========================================================================== */
+  ul {
+    list-style: none;
+  }
+  
+  #habilidades ul li,
+  #contacto ul li {
+    background-color: var(--fondo-tarjeta);
+    border: 1px solid var(--borde-sutil);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--texto-secundario);
+    font-size: 0.95rem;
+  }
+  
+  #habilidades ul li strong,
+  #contacto ul li strong {
+    color: var(--texto-principal);
+  }
+  
+  a {
+    color: var(--texto-principal);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+  }
+  
+  a:hover {
+    color: var(--texto-secundario);
+  }
+  
+  /* ==========================================================================
+     6. PIE DE PÁGINA (Footer)
+     ========================================================================== */
+  footer {
+    border-top: 1px solid var(--borde-sutil);
+    text-align: center;
+    padding: 2rem 1.5rem;
+    color: var(--texto-secundario);
+    font-size: 0.85rem;
+  }
